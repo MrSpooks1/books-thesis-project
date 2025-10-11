@@ -1,0 +1,42 @@
+﻿<Window x:Class="books.DetailedSaleInfoWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:books"
+        mc:Ignorable="d"
+        Title="Подробная информация о продаже" MinHeight="750" MinWidth="500" Background="#2C3531">
+    <Grid Margin="30">
+        <Viewbox VerticalAlignment="Top">
+            <StackPanel>
+                <TextBlock Name="receiptNumViewTextBlock" FontSize="14" Foreground="#D1E8E2"></TextBlock>
+                <TextBlock Name="employeeFullNameViewTextBlock" FontSize="14" Foreground="#D1E8E2"></TextBlock>
+                <TextBlock Name="customersCardNubmerViewTextBlock" FontSize="14" Foreground="#D1E8E2"></TextBlock>
+                <TextBlock Name="dateTimeViewTextBlock" FontSize="14"  Foreground="#D1E8E2"></TextBlock>
+                <TextBlock Name="paymentMethodViewTextBlock" FontSize="14"  Foreground="#D1E8E2"></TextBlock>
+                <ListBox Name="soldProductsListBox">
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel>
+                                <TextBlock FontSize="14" DataContext="{Binding Path=Product}" Text="{Binding Path=Name}" TextWrapping="Wrap"></TextBlock>
+                                <TextBlock FontSize="14">
+                        <Run>Стоимость:</Run>
+                        <Run DataContext="{Binding Path=Product}" Text="{Binding Path=SalePrice}"></Run>
+                        <Run>руб.</Run>
+                                </TextBlock>
+                                <TextBlock FontSize="14">
+                        <Run>Количество:</Run>
+                        <Run Text="{Binding Path=Quantity}"></Run>
+                                </TextBlock>
+                            </StackPanel>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+                <TextBlock Name="summCostViewTextBlock" FontSize="14" Foreground="#D1E8E2"></TextBlock>
+                <Button Name="RefundButton" FontSize="14" Width="250" Height="50" Click="RefundButton_Click" Background="#5CDB95">
+                    <TextBlock FontSize="20">Оформить возврат</TextBlock>
+                </Button>
+            </StackPanel>
+        </Viewbox>
+    </Grid>
+</Window>

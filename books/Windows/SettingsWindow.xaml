@@ -1,0 +1,25 @@
+﻿<Window x:Class="books.SettingsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:books"
+        mc:Ignorable="d"
+        Title="Настройки" Height="600" Width="450" MinHeight="600" MinWidth="450">
+    <Grid Background="#2C3531">
+        <Viewbox VerticalAlignment="Top">
+            <StackPanel Margin="10">
+                <StackPanel HorizontalAlignment="Center" Name="outletSelectionStackPanel">
+                    <TextBlock  Foreground="#D1E8E2">Текущая торговая точка</TextBlock>
+                    <ComboBox Width="350" Height="45" Name="outletSelectionComboBox"></ComboBox>
+                </StackPanel>
+                <Button Background="#5CDB95" Width="200" Height="50" Margin="20" Name="SaveSettingsButton" Click="SaveSettingsButton_Click">
+                    <TextBlock>Сохранить настройки</TextBlock>
+                </Button>
+                <Button Background="#5CDB95" Width="200" Height="50" Margin="20" Name="LogOutButton" Click="LogOutButton_Click">
+                    <TextBlock>Выйти из аккаунта</TextBlock>
+                </Button>
+            </StackPanel>
+        </Viewbox>
+    </Grid>
+</Window>

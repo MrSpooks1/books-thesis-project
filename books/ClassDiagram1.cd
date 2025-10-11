@@ -1,0 +1,190 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="books.BooksContext">
+    <Position X="14" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEgAASQAQAUABAAAAAABAAAGAAAAAAAAAAAAAABAAQ=</HashCode>
+      <FileName>Database\BooksContext.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="books.DatabaseControl">
+    <Position X="16" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAkCAAIAAACAQgUAAQICEAAgAgAAIQAAAACACIEA=</HashCode>
+      <FileName>Database\DatabaseControl.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="BooksContext" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="books.PresentableEmployee">
+    <Position X="2.5" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\Modified\PresentableEmployee.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="books.PresentableSale">
+    <Position X="12.25" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\Modified\PresentableSale.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="books.SelectedProduct">
+    <Position X="2.5" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\Modified\SelectedProduct.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="books.Employee">
+    <Position X="3.25" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABACAAAAAAAgAJAAAAAARAAAAAAAAAACAAAQAAAAAAA=</HashCode>
+      <FileName>Entities\Employee.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Sales" />
+      <Property Name="Shipments" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="books.Outlet">
+    <Position X="8.5" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQiAAAAAAAAABAAAAAABAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\Outlet.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Sales" />
+      <Property Name="Shipments" />
+      <Property Name="OutletProducts" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="books.OutletProduct">
+    <Position X="9.75" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAACAAAAAAAAAAIAAAAAAAAAAAAQAAAAAAAAgAAAAAA=</HashCode>
+      <FileName>Entities\OutletProduct.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Outlet" />
+      <Property Name="Product" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="books.PaymentMethod">
+    <Position X="10.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAgBAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\PaymentMethod.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Sales" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="books.Product">
+    <Position X="7" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEiAAAQCQAAAAAAAAQAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\Product.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="ProductType" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="SoldProducts" />
+      <Property Name="ReceivedProducts" />
+      <Property Name="OutletProducts" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="books.ProductType">
+    <Position X="4.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAQ=</HashCode>
+      <FileName>Entities\ProductType.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Products" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="books.Provider">
+    <Position X="10.75" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAABAAIAAAQAQAAAAACAAAAAAAAgAABAA=</HashCode>
+      <FileName>Entities\Provider.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Shipments" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="books.ProviderType">
+    <Position X="12.25" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAEAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>Entities\ProviderType.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Providers" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="books.ReceivedProduct">
+    <Position X="5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAACAAAAAAAAABAAAAAAAAAAAAAAAAEAAAAAgAAAAAA=</HashCode>
+      <FileName>Entities\ReceivedProduct.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Product" />
+      <Property Name="Shipment" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="books.Sale">
+    <Position X="8.5" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEABAAAAAQAAAAIAAAAAAAAACAAQAAQIAAAAIAACAAA=</HashCode>
+      <FileName>Entities\Sale.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Outlet" />
+      <Property Name="Employee" />
+      <Property Name="PaymentMethod" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="SoldProducts" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="books.Shipment">
+    <Position X="6.5" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAECAAAAAAAEAAIABAAAAAAACAAQAAAAAAAAAAACAAA=</HashCode>
+      <FileName>Entities\Shipment.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Employee" />
+      <Property Name="Outlet" />
+      <Property Name="Provider" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="ReceivedProducts" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="books.SoldProduct">
+    <Position X="6.5" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAACAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAEAA=</HashCode>
+      <FileName>Entities\SoldProduct.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Product" />
+      <Property Name="Sale" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="books.Hashing">
+    <Position X="12.25" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Hashing.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

@@ -1,0 +1,46 @@
+﻿<Window x:Class="books.OutletProductsViewWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:books"
+        mc:Ignorable="d"
+        Title="Просмотр информации о товарах" MinHeight="450" MinWidth="800">
+    <Grid  Background="#2C3531">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.3*"></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="0.3*"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Viewbox MaxWidth="500">
+            <TextBlock FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="#D1E8E2">Просмотр информации о товарах</TextBlock>
+        </Viewbox>
+        <ListBox Name="productsListBox" Grid.Row="1" MouseDoubleClick="productsListBox_MouseDoubleClick" Margin="10" Background="#D1E8E2">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel>
+                        <TextBlock FontSize="18" DataContext="{Binding Path=Product}" Text="{Binding Path=Name}"></TextBlock>
+                        <TextBlock FontSize="18">
+                            <Run>Идентификатор товара:</Run>
+                            <Run DataContext="{Binding Path=Product}" Text="{Binding Path=Id}"></Run>
+                        </TextBlock>
+                        <TextBlock FontSize="18" >
+                            <Run>Цена:</Run>
+                            <Run DataContext="{Binding Path=Product}" Text="{Binding Path=SalePrice}"></Run>
+                        </TextBlock>
+                        <TextBlock FontSize="18" >
+                            <Run>Количество на складе:</Run>
+                            <Run Text="{Binding Path=Quantity}"></Run>
+                        </TextBlock>
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        <Viewbox Grid.Row="2" Margin="20">
+            <Button Name="openAddProductFormButton" Height="50" Width="250" FontSize="14" Click="openAddProductFormButton_Click"   Background="#5CDB95">
+                <TextBlock FontSize="20">Добавить новый товар</TextBlock>
+            </Button>
+        </Viewbox>
+    </Grid>
+</Window>
